@@ -6,8 +6,19 @@ export default function BookingFlow() {
   const [step, setStep] = useState(1);
   const [roomType, setRoomType] = useState<"twin" | "single" | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<"stripe" | "paypal" | null>(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    whatsapp: "",
+    country: "Australia"
+  });
 
   const getPrice = () => roomType === "single" ? "AUD 2,350" : "AUD 2,200";
+  const isFormValid = formData.firstName.trim() !== "" && 
+                      formData.lastName.trim() !== "" && 
+                      formData.email.trim() !== "" && 
+                      formData.whatsapp.trim() !== "";
 
   return (
     <div className="w-full bg-white border border-primary/20 rounded-3xl shadow-sm overflow-hidden">
@@ -123,28 +134,28 @@ export default function BookingFlow() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
               <div>
-                <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">First Name</label>
-                <input type="text" className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="John" />
+                <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">First Name *</label>
+                <input type="text" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="John" required />
               </div>
               <div>
-                <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">Last Name</label>
-                <input type="text" className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="Doe" />
+                <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">Last Name *</label>
+                <input type="text" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="Doe" required />
               </div>
             </div>
 
             <div className="mb-4 md:mb-6">
-              <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">Email Address</label>
-              <input type="email" className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="john@example.com" />
+              <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">Email Address *</label>
+              <input type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="john@example.com" required />
             </div>
 
             <div className="mb-4 md:mb-6">
-              <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">WhatsApp Number</label>
-              <input type="tel" className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="+61..." />
+              <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">WhatsApp Number *</label>
+              <input type="tel" value={formData.whatsapp} onChange={(e) => setFormData({...formData, whatsapp: e.target.value})} className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-medium" placeholder="+61..." required />
             </div>
 
             <div className="mb-8 md:mb-10">
               <label className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">Country</label>
-              <select className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none font-medium text-neutral">
+              <select value={formData.country} onChange={(e) => setFormData({...formData, country: e.target.value})} className="w-full bg-white border border-secondary/40 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none font-medium text-neutral">
                 <option>Australia</option>
                 <option>Indonesia</option>
                 <option>United States</option>
@@ -153,7 +164,8 @@ export default function BookingFlow() {
             </div>
 
             <button
-              className="w-full py-4 rounded-full bg-primary text-white font-bold tracking-wide hover:bg-opacity-90 shadow-md transition-all mb-4"
+              className={`w-full py-4 rounded-full text-white font-bold tracking-wide transition-all mb-4 ${isFormValid ? "bg-primary hover:bg-opacity-90 shadow-md" : "bg-neutral/30 cursor-not-allowed"}`}
+              disabled={!isFormValid}
               onClick={() => setStep(3)}
             >
               CONTINUE TO PAYMENT &rarr;
@@ -177,7 +189,7 @@ export default function BookingFlow() {
               </div>
               <div className="flex justify-between">
                 <span className="opacity-80">Name</span>
-                <span className="font-bold">John Doe</span>
+                <span className="font-bold">{formData.firstName} {formData.lastName}</span>
               </div>
               <div className="border-t border-secondary/30 pt-4 flex justify-between font-bold text-base">
                 <span>Total</span>
@@ -186,16 +198,11 @@ export default function BookingFlow() {
             </div>
 
             <h3 className="text-2xl md:text-3xl font-serif mb-2 md:mb-4">Payment method</h3>
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6 md:mb-8">
-              <p className="opacity-80 text-xs md:text-sm font-medium">Select how you'd like to complete your booking.</p>
-              <div className="md:hidden flex self-start items-center gap-1.5 text-primary text-[10px] font-bold uppercase tracking-widest bg-primary/5 px-3 py-1.5 rounded-full border border-primary/20">
-                &larr; Swipe options &rarr;
-              </div>
-            </div>
+            <p className="opacity-80 text-xs md:text-sm mb-6 md:mb-8 font-medium">Select how you'd like to complete your booking.</p>
 
-            <div className="flex overflow-x-auto md:grid md:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 snap-x snap-mandatory pb-4 -mx-4 md:mx-0 px-4 md:px-0 scrollbar-hide md:pb-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10">
               <div
-                className={`shrink-0 w-[75vw] md:w-auto snap-center border-2 rounded-2xl p-4 md:p-6 text-center cursor-pointer transition-all ${paymentMethod === "stripe" ? "border-blue-500 bg-blue-50/50" : "border-secondary/40 hover:border-blue-300"}`}
+                className={`border-2 rounded-2xl p-4 md:p-6 text-center cursor-pointer transition-all ${paymentMethod === "stripe" ? "border-blue-500 bg-blue-50/50" : "border-secondary/40 hover:border-blue-300"}`}
                 onClick={() => setPaymentMethod("stripe")}
               >
                 <div className="text-blue-600 font-bold text-xl mb-2">Stripe</div>
@@ -204,7 +211,7 @@ export default function BookingFlow() {
               </div>
 
               <div
-                className={`shrink-0 w-[75vw] md:w-auto snap-center border-2 rounded-2xl p-4 md:p-6 text-center cursor-pointer transition-all ${paymentMethod === "paypal" ? "border-blue-500 bg-blue-50/50" : "border-secondary/40 hover:border-blue-300"}`}
+                className={`border-2 rounded-2xl p-4 md:p-6 text-center cursor-pointer transition-all ${paymentMethod === "paypal" ? "border-blue-500 bg-blue-50/50" : "border-secondary/40 hover:border-blue-300"}`}
                 onClick={() => setPaymentMethod("paypal")}
               >
                 <div className="text-[#003087] font-bold text-xl mb-2">PayPal</div>
@@ -220,7 +227,7 @@ export default function BookingFlow() {
               disabled={!paymentMethod}
               onClick={() => alert("Redirecting to dummy payment gateway...")}
             >
-              PROCEED TO SECURE CHECKOUT &rarr;
+              SECURE CHECKOUT &rarr;
             </button>
             <button
               className="w-full py-4 rounded-full border-2 border-secondary/40 text-neutral font-bold tracking-wide hover:bg-secondary/10 transition-all"

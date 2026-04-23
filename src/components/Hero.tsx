@@ -35,23 +35,23 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pb-20 lg:pb-28">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-24 pb-16 lg:pt-0 lg:pb-28">
         <div className="max-w-3xl">
           <FadeIn delay={100}>
-            <div className="text-xs font-bold tracking-widest uppercase mb-8 text-white/60">
+            <div className="text-xs font-bold tracking-widest uppercase mb-4 md:mb-8 text-white/60">
               The Invitation &bull; 5 June 2026
             </div>
           </FadeIn>
 
           <FadeIn delay={200}>
-            <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight tracking-tighter text-white">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-4 md:mb-8 leading-tight tracking-tighter text-white">
               4-Day <br className="hidden md:block" />
               <i className="font-serif text-white/90">Deep Reset.</i>
             </h1>
           </FadeIn>
 
           <FadeIn delay={300}>
-            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-xl text-white/80">
+            <p className="text-base md:text-xl leading-relaxed mb-6 md:mb-10 max-w-xl text-white/80">
               A short yet complete healing retreat designed to help you{" "}
               <strong className="text-white font-semibold">
                 rest deeply, release physical and emotional stress, and restore
@@ -61,7 +61,7 @@ export default function Hero() {
             </p>
           </FadeIn>
 
-          <FadeIn delay={400} className="flex flex-col sm:flex-row gap-4 mb-16">
+          <FadeIn delay={400} className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-16">
             <a
               href="#booking"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-neutral font-bold rounded-full hover:bg-white/90 transition-all text-sm tracking-wide shadow-lg"
@@ -111,7 +111,7 @@ export default function Hero() {
       {/* Scroll hint */}
       <FadeIn
         delay={800}
-        className="absolute bottom-8 right-8 z-20 flex flex-col items-center gap-2 text-white/40"
+        className="absolute bottom-8 right-8 z-20 hidden md:flex flex-col items-center gap-2 text-white/40"
       >
         <span className="text-[10px] tracking-widest uppercase rotate-90 origin-center">
           Scroll

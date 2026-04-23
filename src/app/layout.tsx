@@ -14,7 +14,7 @@ const notoSerif = Noto_Serif({
 
 export const metadata: Metadata = {
   // ─── Basic ───────────────────────────────────────────────────────────────
-  metadataBase: new URL("/"),
+  metadataBase: new URL("https://deepreset.pages.dev"),
   title: {
     default: "4 Day Deep Reset | Charia Ayra Wellness",
     template: "%s | Charia Ayra Wellness",
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
 
   // ─── Canonical ────────────────────────────────────────────────────────────
   alternates: {
-    canonical: "/",
+    canonical: "https://deepreset.pages.dev",
   },
 
   // ─── Open Graph (Facebook, WhatsApp, LinkedIn) ────────────────────────────
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://chariaayrawellness.id",
+    url: "https://deepreset.pages.dev",
     siteName: "Charia Ayra Wellness",
     title: "Deep Reset Retreat Bali — 5 June 2026",
     description:

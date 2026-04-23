@@ -46,7 +46,7 @@ export default function Navbar() {
             className="flex items-center gap-2 font-serif text-xl text-white no-underline"
           >
             <span className="text-xl">🌿</span>
-            <i>Chariea Ayra Wellness</i>
+            <i>Chariea Aviya Wellness</i>
           </a>
 
           {/* Desktop Nav Links */}

@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   // ─── Basic ───────────────────────────────────────────────────────────────
   metadataBase: new URL("https://deepreset.pages.dev"),
   title: {
-    default: "4 Day Deep Reset | Charia Ayra Wellness",
-    template: "%s | Charia Ayra Wellness",
+    default: "4 Day Deep Reset | Chariea Aviya Wellness",
+    template: "%s | Chariea Aviya Wellness",
   },
   description:
     "A 4-day healing retreat in Bali on 5 June 2026. Rest deeply, release emotional stress, and restore balance in body, mind, and soul — through yoga, Ayurvedic massage, sound bath, and family constellation. Limited to 10 guests.",
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
     "sound bath Bali",
     "family constellation workshop",
     "yoga retreat Bali",
-    "Charia Ayra Wellness",
+    "Chariea Aviya Wellness",
     "retreat June 2026",
     "stress release retreat",
     "body mind soul retreat",
   ],
 
   // ─── Authorship ───────────────────────────────────────────────────────────
-  authors: [{ name: "Charia Ayra", url: "/" }],
-  creator: "Charia Ayra",
+  authors: [{ name: "Chariea  Aviya", url: "/" }],
+  creator: "Chariea  Aviya",
 
   // ─── Canonical ────────────────────────────────────────────────────────────
   alternates: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://deepreset.pages.dev",
-    siteName: "Charia Ayra Wellness",
+    siteName: "Chariea Aviya Wellness",
     title: "Deep Reset Retreat Bali — 5 June 2026",
     description:
       "A short yet complete 4-day healing retreat in Bali. Restore balance in your body, mind, and soul. Limited to 10 guests.",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200",
         width: 1200,
         height: 630,
-        alt: "Deep Reset Retreat Bali — Charia Ayra Wellness",
+        alt: "Deep Reset Retreat Bali — Chariea Aviya Wellness",
       },
     ],
   },

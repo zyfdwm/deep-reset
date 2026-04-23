@@ -13,8 +13,79 @@ const notoSerif = Noto_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Charia Ayra Wellness | Deep Reset Retreat",
-  description: "A short yet complete healing retreat designed to help you rest deeply.",
+  // ─── Basic ───────────────────────────────────────────────────────────────
+  metadataBase: new URL("/"),
+  title: {
+    default: "4 Day Deep Reset | Charia Ayra Wellness",
+    template: "%s | Charia Ayra Wellness",
+  },
+  description:
+    "A 4-day healing retreat in Bali on 5 June 2026. Rest deeply, release emotional stress, and restore balance in body, mind, and soul — through yoga, Ayurvedic massage, sound bath, and family constellation. Limited to 10 guests.",
+  keywords: [
+    "retreat Bali",
+    "healing retreat Bali",
+    "wellness retreat Bali 2026",
+    "deep reset retreat",
+    "Ayurvedic retreat",
+    "sound bath Bali",
+    "family constellation workshop",
+    "yoga retreat Bali",
+    "Charia Ayra Wellness",
+    "retreat June 2026",
+    "stress release retreat",
+    "body mind soul retreat",
+  ],
+
+  // ─── Authorship ───────────────────────────────────────────────────────────
+  authors: [{ name: "Charia Ayra", url: "/" }],
+  creator: "Charia Ayra",
+
+  // ─── Canonical ────────────────────────────────────────────────────────────
+  alternates: {
+    canonical: "/",
+  },
+
+  // ─── Open Graph (Facebook, WhatsApp, LinkedIn) ────────────────────────────
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://chariaayrawellness.id",
+    siteName: "Charia Ayra Wellness",
+    title: "Deep Reset Retreat Bali — 5 June 2026",
+    description:
+      "A short yet complete 4-day healing retreat in Bali. Restore balance in your body, mind, and soul. Limited to 10 guests.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200",
+        width: 1200,
+        height: 630,
+        alt: "Deep Reset Retreat Bali — Charia Ayra Wellness",
+      },
+    ],
+  },
+
+  // ─── Twitter / X Card ─────────────────────────────────────────────────────
+  twitter: {
+    card: "summary_large_image",
+    title: "Deep Reset Retreat Bali — 5 June 2026",
+    description:
+      "A 4-day healing retreat in Bali. Rest deeply, release stress, and restore balance. Limited to 10 guests.",
+    images: [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200",
+    ],
+  },
+
+  // ─── Robots ───────────────────────────────────────────────────────────────
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

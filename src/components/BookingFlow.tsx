@@ -29,7 +29,7 @@ export default function BookingFlow() {
               `}
             >
               <span
-                className={`inline-flex w-5 h-5 rounded-full items-center justify-center text-[10px] font-bold flex-shrink-0
+                className={`inline-flex w-5 h-5 rounded-full items-center justify-center text-[10px] font-bold shrink-0
                   ${isDone ? "bg-primary text-white" : isActive ? "bg-primary text-white" : "border-2 border-current"}
                 `}
               >

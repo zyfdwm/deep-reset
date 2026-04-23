@@ -109,7 +109,7 @@ export default function EverythingYouNeed() {
                 <ul className="space-y-3.5">
                   {item.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                       <span className="text-neutral/75 text-sm leading-relaxed">
                         {point}
                       </span>
@@ -162,7 +162,7 @@ export default function EverythingYouNeed() {
               <ul className="space-y-5">
                 {outcomes.map((item, i) => (
                   <li key={i} className="flex items-start gap-5 group">
-                    <span className="font-serif text-xs text-secondary/40 mt-0.5 w-5 flex-shrink-0">
+                    <span className="font-serif text-xs text-secondary/40 mt-0.5 w-5 shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="flex-1">

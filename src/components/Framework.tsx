@@ -84,7 +84,7 @@ export default function Framework() {
             <FadeIn
               key={pillar.number}
               delay={i * 120}
-              className="group bg-white/[0.03] hover:bg-white/[0.06] transition-colors duration-500 p-10 lg:p-12 flex flex-col gap-6"
+              className="group bg-white/3 hover:bg-white/6 transition-colors duration-500 p-10 lg:p-12 flex flex-col gap-6"
             >
               {/* Number */}
               <span className="text-xs font-bold tracking-widest text-white/20">
@@ -105,7 +105,7 @@ export default function Framework() {
               </p>
 
               {/* Activity tags */}
-              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/[0.08]">
+              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/8">
                 {pillar.tags.map((tag) => (
                   <span
                     key={tag}

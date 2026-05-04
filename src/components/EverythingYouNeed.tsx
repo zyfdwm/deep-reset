@@ -28,7 +28,7 @@ const items = [
       "Foods that best support your body",
       "How to prepare simple Ayurvedic meals at home",
     ],
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=85&w=900",
+    image: "https://res.cloudinary.com/dgz4njcvb/image/upload/v1777869414/Well-Being-and-an-Ayurvedic-Diet-2_dtoi1d.jpg?q=85&w=900",
     alt: "Fresh Ayurvedic nourishing meal",
     imageRight: true,
   },

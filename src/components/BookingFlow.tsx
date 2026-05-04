@@ -74,15 +74,7 @@ export default function BookingFlow() {
                 </div>
                 <h3 className="text-lg md:text-2xl font-serif mb-1 md:mb-4">Twin share</h3>
                 <div className="text-xl md:text-3xl mb-1 md:mb-2 font-bold text-primary">AUD 2,200 <span className="text-xs md:text-base font-normal opacity-60 text-neutral">/ person</span></div>
-                <p className="opacity-60 text-[10px] md:text-sm mb-3 md:mb-6 border-b border-secondary/30 pb-3 md:pb-6 font-medium leading-tight">Shared room with another participant</p>
-                <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-3 gap-y-1 md:space-y-3 opacity-80 text-[10px] md:text-sm font-medium leading-tight">
-                  <li>• 4 nights stay</li>
-                  <li>• All meals incl.</li>
-                  <li>• Daily yoga</li>
-                  <li>• 1-hr Massage</li>
-                  <li>• Sound Bath</li>
-                  <li>• Family Const.</li>
-                </ul>
+                <p className="opacity-60 text-[10px] md:text-sm font-medium leading-tight">Shared room with another participant</p>
               </div>
 
               {/* Single Room */}
@@ -97,15 +89,7 @@ export default function BookingFlow() {
                 </div>
                 <h3 className="text-lg md:text-2xl font-serif mb-1 md:mb-4">Single room</h3>
                 <div className="text-xl md:text-3xl mb-1 md:mb-2 font-bold text-primary">AUD 2,350 <span className="text-xs md:text-base font-normal opacity-60 text-neutral">/ person</span></div>
-                <p className="opacity-60 text-[10px] md:text-sm mb-3 md:mb-6 border-b border-secondary/30 pb-3 md:pb-6 font-medium leading-tight">Your own private sanctuary</p>
-                <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-3 gap-y-1 md:space-y-3 opacity-80 text-[10px] md:text-sm font-medium leading-tight">
-                  <li>• 4 nights stay</li>
-                  <li>• All meals incl.</li>
-                  <li>• Daily yoga</li>
-                  <li>• 1-hr Massage</li>
-                  <li>• Sound Bath</li>
-                  <li>• Family Const.</li>
-                </ul>
+                <p className="opacity-60 text-[10px] md:text-sm font-medium leading-tight">Your own private sanctuary</p>
               </div>
             </div>
 

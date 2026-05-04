@@ -22,7 +22,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "The Retreat", href: "#retreat" },
-    { label: "Experience", href: "#experience" },
+    { label: "Experience", href: "#gallery" },
     { label: "Included", href: "#included" },
     { label: "Dates & Pricing", href: "#booking" },
   ];

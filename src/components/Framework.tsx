@@ -68,7 +68,6 @@ export default function Framework() {
         {/* Header */}
         <FadeIn className="mb-20 text-center">
           <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-neutral/40 mb-5">
-            The Framework
           </p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-brand-brown leading-none tracking-tight">
             Body.{" "}

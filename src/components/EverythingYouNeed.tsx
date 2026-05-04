@@ -142,38 +142,52 @@ export default function EverythingYouNeed() {
         </FadeIn>
       ))}
 
-      {/* After the Retreat — full-width warm band */}
-      <FadeIn delay={300}>
-        <div className="mt-8 bg-tertiary">
-          <div className="max-w-7xl mx-auto px-6 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-              {/* Left */}
-              <div>
+      {/* Consistent Inclusions Section */}
+      <FadeIn delay={400}>
+        <div className="bg-tertiary/50">
+          <div className="max-w-7xl mx-auto px-6 py-28 lg:py-32">
+            <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
+              <div className="lg:w-1/3">
                 <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-brand-brown mb-5">
-                  After the Retreat
+                  The Full Package
                 </p>
-                <h3 className="text-4xl md:text-5xl font-serif text-neutral leading-tight mb-3">
-                  You will leave with
+                <h3 className="text-4xl md:text-5xl font-serif text-neutral leading-tight mb-6">
+                  What is <br /> <i className="text-brand-brown">Included.</i>
                 </h3>
-                <p className="text-neutral/55 text-sm">
-                  A complete reset — carried with you long after you return home.
+                <p className="text-neutral/55 text-base">
+                  A comprehensive curation of every detail, ensuring you can focus entirely on your path to restoration.
                 </p>
               </div>
 
-              {/* Right — outcomes */}
-              <ul className="space-y-5">
-                {outcomes.map((item, i) => (
-                  <li key={i} className="flex items-start gap-5 group">
-                    <span className="font-serif text-xs text-brand-brown/70 mt-0.5 w-5 shrink-0">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="flex-1">
-                      <div className="h-px bg-brand-brown/40 mb-4" />
-                      <span className="text-neutral text-base">{item}</span>
+              <div className="lg:w-2/3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                  {[
+                    { title: "Stay", items: ["3 nights private luxury accommodation", "Private airport pickup & return transfers"] },
+                    { title: "Nourishment", items: ["Full board Ayurvedic breakfast, lunch, & dinner", "Ayurvedic cooking masterclass & ingredients"] },
+                    { title: "Healing", items: ["60-minute Ayurvedic massage session", "Personal group Ayurvedic health consultation", "Sound bath & meditation journeys"] },
+                    { title: "Workshops", items: ["Family constellation ancestral healing", "Shadow work & Integration sessions", "Body movement & stress release"] }
+                  ].map((group, idx) => (
+                    <div key={idx} className="flex flex-col gap-6">
+                      <div className="flex items-center gap-4">
+                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-brown/50">
+                          {group.title}
+                        </span>
+                        <div className="h-px flex-1 bg-brand-brown/10" />
+                      </div>
+                      <ul className="space-y-3">
+                        {group.items.map((item, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="w-1 h-1 rounded-full bg-brand-brown/40 mt-2" />
+                            <span className="text-neutral/75 text-sm leading-relaxed tracking-wide">
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

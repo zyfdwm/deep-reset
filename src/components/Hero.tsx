@@ -38,7 +38,7 @@ export default function Hero() {
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-24 pb-16 lg:pt-0 lg:pb-28">
         <div className="max-w-3xl">
           <FadeIn delay={100}>
-            <div className="text-xs font-bold tracking-widest uppercase mb-4 md:mb-8 text-white/60">
+            <div className="text-xs font-bold tracking-widest uppercase mb-4 md:mb-8 text-neutral/80">
               The Invitation &bull; 5 June 2026
             </div>
           </FadeIn>
@@ -78,29 +78,29 @@ export default function Hero() {
 
           <FadeIn
             delay={500}
-            className="grid grid-cols-3 gap-6 pt-8 border-t border-white/20"
+            className="grid grid-cols-3 gap-6 pt-8 border-t border-brand-brown/40"
           >
             <div>
-              <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-2">
+              <div className="text-[10px] font-bold tracking-widest uppercase text-neutral/60 mb-2">
                 Duration
               </div>
-              <div className="text-base font-serif font-medium text-white">
+              <div className="text-base font-serif font-medium text-neutral">
                 4 days &bull; 3 nights
               </div>
             </div>
             <div>
-              <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-2">
+              <div className="text-[10px] font-bold tracking-widest uppercase text-neutral/60 mb-2">
                 Location
               </div>
-              <div className="text-base font-serif font-medium text-white">
+              <div className="text-base font-serif font-medium text-neutral">
                 Bali, Indonesia
               </div>
             </div>
             <div>
-              <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-2">
+              <div className="text-[10px] font-bold tracking-widest uppercase text-neutral/60 mb-2">
                 Group Size
               </div>
-              <div className="text-base font-serif font-medium text-white">
+              <div className="text-base font-serif font-medium text-neutral">
                 10 guests
               </div>
             </div>
@@ -111,12 +111,12 @@ export default function Hero() {
       {/* Scroll hint */}
       <FadeIn
         delay={800}
-        className="absolute bottom-8 right-8 z-20 hidden md:flex flex-col items-center gap-2 text-white/40"
+        className="absolute bottom-8 right-8 z-20 hidden md:flex flex-col items-center gap-2 text-neutral/60"
       >
         <span className="text-[10px] tracking-widest uppercase rotate-90 origin-center">
           Scroll
         </span>
-        <div className="w-px h-10 bg-white/30" />
+        <div className="w-px h-10 bg-brand-brown/50" />
       </FadeIn>
     </section>
   );

@@ -31,8 +31,8 @@ export default function WhyThisRetreat() {
             </p>
           </FadeIn>
 
-          <FadeIn delay={300} className="mt-16 pt-8 border-t border-secondary/50 max-w-xl">
-            <div className="font-serif text-3xl mb-2 text-primary">&mdash; Charia</div>
+          <FadeIn delay={300} className="mt-16 pt-8 border-t border-brand-brown/40 max-w-xl">
+            <div className="font-serif text-3xl mb-2 text-brand-brown">&mdash; Charia</div>
             <div className="text-[10px] font-bold tracking-widest uppercase text-neutral/60">Founder &bull; Guide</div>
           </FadeIn>
         </div>

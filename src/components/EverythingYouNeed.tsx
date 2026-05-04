@@ -14,7 +14,7 @@ const items = [
       "Family Constellation Workshop",
       "Release of emotional tension & generational patterns",
     ],
-    image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=85&w=900",
+    image: "https://res.cloudinary.com/dgz4njcvb/image/upload/v1777868865/WhatsApp_Image_2026-05-04_at_10.45.11_ab2kdl.jpg?q=85&w=900",
     alt: "Singing bowls sound healing",
     imageRight: false,
   },
@@ -62,19 +62,19 @@ export default function EverythingYouNeed() {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 pt-28 pb-16">
         <FadeIn>
-          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-secondary mb-4">
+          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-brand-brown mb-4">
             What&rsquo;s Included
           </p>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-neutral leading-tight max-w-2xl">
             Everything you need{" "}
-            <i className="text-primary">to reset.</i>
+            <i className="text-brand-brown">to reset.</i>
           </h2>
         </FadeIn>
       </div>
 
       {/* Divider */}
       <div className="max-w-7xl mx-auto px-6">
-        <div className="border-t border-secondary/20" />
+        <div className="border-t border-brand-brown/30" />
       </div>
 
       {/* Editorial rows */}
@@ -82,18 +82,17 @@ export default function EverythingYouNeed() {
         <FadeIn key={item.index} delay={i * 80}>
           <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-                item.imageRight ? "" : "lg:[&>*:first-child]:order-last"
-              }`}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${item.imageRight ? "" : "lg:[&>*:first-child]:order-last"
+                }`}
             >
               {/* Text side */}
               <div className="flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="font-serif text-[11px] tracking-widest text-secondary/60">
+                  <span className="font-serif text-[11px] tracking-widest text-brand-brown/80">
                     {item.index}
                   </span>
-                  <div className="h-px flex-1 bg-secondary/20" />
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-secondary/60">
+                  <div className="h-px flex-1 bg-brand-brown/40" />
+                  <span className="text-[10px] font-bold tracking-widest uppercase text-brand-brown/80">
                     {item.category}
                   </span>
                 </div>
@@ -134,7 +133,7 @@ export default function EverythingYouNeed() {
           {/* Row divider (skip last) */}
           {i < items.length - 1 && (
             <div className="max-w-7xl mx-auto px-6">
-              <div className="border-t border-secondary/15" />
+              <div className="border-t border-brand-brown/20" />
             </div>
           )}
         </FadeIn>
@@ -147,7 +146,7 @@ export default function EverythingYouNeed() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
               {/* Left */}
               <div>
-                <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-secondary mb-5">
+                <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-brand-brown mb-5">
                   After the Retreat
                 </p>
                 <h3 className="text-4xl md:text-5xl font-serif text-neutral leading-tight mb-3">
@@ -162,12 +161,12 @@ export default function EverythingYouNeed() {
               <ul className="space-y-5">
                 {outcomes.map((item, i) => (
                   <li key={i} className="flex items-start gap-5 group">
-                    <span className="font-serif text-xs text-secondary/40 mt-0.5 w-5 shrink-0">
+                    <span className="font-serif text-xs text-brand-brown/70 mt-0.5 w-5 shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="flex-1">
-                      <div className="h-px bg-secondary/20 mb-4" />
-                      <span className="text-neutral/80 text-base">{item}</span>
+                      <div className="h-px bg-brand-brown/40 mb-4" />
+                      <span className="text-neutral text-base">{item}</span>
                     </div>
                   </li>
                 ))}

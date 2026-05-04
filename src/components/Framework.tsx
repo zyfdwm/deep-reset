@@ -32,8 +32,7 @@ export default function Framework() {
       id="experience"
       className="relative py-28 px-6 overflow-hidden"
       style={{
-        background:
-          "linear-gradient(160deg, #2C2C2C 0%, #252520 60%, #2C2820 100%)",
+        background: "var(--color-cream)",
       }}
     >
       {/* Subtle dot texture */}
@@ -68,39 +67,39 @@ export default function Framework() {
 
         {/* Header */}
         <FadeIn className="mb-20 text-center">
-          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-white/25 mb-5">
+          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-neutral/40 mb-5">
             The Framework
           </p>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-none tracking-tight">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-brand-brown leading-none tracking-tight">
             Body.{" "}
-            <i className="text-white/35">Mind.</i>{" "}
-            <span className="text-white/15">Soul.</span>
+            <i className="text-brand-brown/35">Mind.</i>{" "}
+            <span className="text-brand-brown/15">Soul.</span>
           </h2>
         </FadeIn>
 
         {/* Pillars grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-brand-brown/40 rounded-2xl overflow-hidden">
           {pillars.map((pillar, i) => (
             <FadeIn
               key={pillar.number}
               delay={i * 120}
-              className="group bg-white/3 hover:bg-white/6 transition-colors duration-500 p-10 lg:p-12 flex flex-col gap-6"
+              className="group bg-white/50 hover:bg-white transition-colors duration-500 p-10 lg:p-12 flex flex-col gap-6"
             >
               {/* Number */}
-              <span className="text-xs font-bold tracking-widest text-white/20">
+              <span className="text-xs font-bold tracking-widest text-neutral/80">
                 {pillar.number}
               </span>
 
               {/* Title */}
-              <h3 className="text-4xl lg:text-5xl font-serif text-white leading-none">
+              <h3 className="text-4xl lg:text-5xl font-serif text-brand-brown leading-none">
                 {pillar.title}
               </h3>
 
               {/* Divider */}
-              <div className="w-8 h-px bg-white/20 group-hover:w-14 transition-all duration-500" />
+              <div className="w-8 h-px bg-brand-brown/40 group-hover:w-14 transition-all duration-500" />
 
               {/* Description */}
-              <p className="text-white/60 text-lg leading-relaxed">
+              <p className="text-neutral/90 text-lg leading-relaxed">
                 {pillar.description}
               </p>
 
@@ -109,7 +108,7 @@ export default function Framework() {
                 {pillar.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] font-semibold tracking-wider uppercase px-3 py-1.5 rounded-full border border-white/10 text-white/30"
+                    className="text-[10px] font-semibold tracking-wider uppercase px-3 py-1.5 rounded-full border border-brand-brown/30 text-neutral/80"
                   >
                     {tag}
                   </span>
@@ -121,9 +120,9 @@ export default function Framework() {
 
         {/* Closing line */}
         <FadeIn delay={400} className="mt-16 text-center">
-          <p className="text-white/30 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-neutral/40 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             When we begin to understand and support these three aspects,{" "}
-            <em className="text-white/50 not-italic font-serif">
+            <em className="text-neutral/60 not-italic font-serif">
               healing can unfold naturally.
             </em>
           </p>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import FadeIn from "./FadeIn";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
         className="w-full fixed top-0 left-0 z-50 transition-all duration-500"
         style={{
           background: scrolled
-            ? "rgba(10, 10, 8, 0.75)"
+            ? "rgba(212, 176, 147, 0.85)"
             : "transparent",
           backdropFilter: scrolled ? "blur(16px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
@@ -43,19 +44,18 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2 font-serif text-xl text-white no-underline"
+            className={`${scrolled ? "text-neutral" : "text-white"} no-underline hover:opacity-90 transition-colors duration-500`}
           >
-            <span className="text-xl">🌿</span>
-            <i>Chariea Aviya Wellness</i>
+            <Logo />
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-white/80">
+          <div className={`hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide transition-colors duration-500 ${scrolled ? "text-neutral/80" : "text-white/80"}`}>
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="hover:text-white transition-colors duration-200"
+                className={`hover:${scrolled ? "text-neutral" : "text-white"} transition-colors duration-200`}
               >
                 {link.label}
               </a>
@@ -65,7 +65,11 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="#booking"
-            className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/40 text-white text-sm font-semibold tracking-wide hover:bg-white hover:text-neutral transition-all duration-300"
+            className={`hidden lg:inline-flex items-center justify-center px-6 py-2.5 rounded-full border transition-all duration-300 text-sm font-semibold tracking-wide
+              ${scrolled 
+                ? "border-neutral/40 text-neutral hover:bg-neutral hover:text-white" 
+                : "border-white/40 text-white hover:bg-white hover:text-neutral"}
+            `}
           >
             Reserve your spot &rarr;
           </a>
@@ -78,15 +82,15 @@ export default function Navbar() {
             aria-expanded={menuOpen}
           >
             <span
-              className="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"
+              className={`block w-6 h-0.5 transition-all duration-300 origin-center ${scrolled ? "bg-neutral" : "bg-white"}`}
               style={menuOpen ? { transform: "translateY(8px) rotate(45deg)" } : {}}
             />
             <span
-              className="block w-6 h-0.5 bg-white transition-all duration-300"
+              className={`block w-6 h-0.5 transition-all duration-300 ${scrolled ? "bg-neutral" : "bg-white"}`}
               style={menuOpen ? { opacity: 0 } : {}}
             />
             <span
-              className="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"
+              className={`block w-6 h-0.5 transition-all duration-300 origin-center ${scrolled ? "bg-neutral" : "bg-white"}`}
               style={menuOpen ? { transform: "translateY(-8px) rotate(-45deg)" } : {}}
             />
           </button>
@@ -97,7 +101,7 @@ export default function Navbar() {
       <div
         className="fixed inset-0 z-40 flex flex-col justify-center items-center lg:hidden transition-all duration-500"
         style={{
-          background: "rgba(10, 10, 8, 0.97)",
+          background: "rgba(212, 176, 147, 0.98)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
           opacity: menuOpen ? 1 : 0,
@@ -111,7 +115,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-3xl font-serif text-white/80 hover:text-white transition-colors duration-200"
+              className="text-3xl font-serif text-neutral/70 hover:text-neutral transition-colors duration-200"
               style={{
                 transitionDelay: menuOpen ? `${i * 60}ms` : "0ms",
                 transform: menuOpen ? "translateY(0)" : "translateY(16px)",

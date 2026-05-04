@@ -58,15 +58,12 @@ export default function BookingFlow() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5 md:mb-8">
               <p className="opacity-80 font-medium text-sm md:text-base">Both options include the full retreat experience. Choose what suits you best.</p>
-              <div className="md:hidden flex self-start items-center gap-1.5 text-primary text-[10px] font-bold uppercase tracking-widest bg-primary/5 px-3 py-1.5 rounded-full border border-primary/20">
-                &larr; Swipe to see more &rarr;
-              </div>
             </div>
 
-            <div className="flex overflow-x-auto md:grid md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10 snap-x snap-mandatory pb-4 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide md:pb-0">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
               {/* Twin Room */}
               <div
-                className={`shrink-0 w-[85vw] md:w-auto snap-center border-2 rounded-2xl p-5 md:p-8 cursor-pointer transition-all ${roomType === "twin" ? "border-primary bg-primary/5" : "border-secondary/30 hover:border-primary/50"}`}
+                className={`w-full md:w-auto border-2 rounded-2xl p-4 md:p-8 cursor-pointer transition-all ${roomType === "twin" ? "border-primary bg-primary/5 shadow-md scale-[1.01]" : "border-secondary/30 hover:border-primary/50"}`}
                 onClick={() => setRoomType("twin")}
               >
                 <div className="flex justify-between items-start mb-4 md:mb-6">
@@ -75,22 +72,22 @@ export default function BookingFlow() {
                   </div>
                   <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] rounded-full font-bold uppercase tracking-widest">Save AUD 150</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-serif mb-2 md:mb-4">Twin share</h3>
-                <div className="text-2xl md:text-3xl mb-1 md:mb-2 font-bold">AUD 2,200 <span className="text-sm md:text-base font-normal opacity-60">/ person</span></div>
-                <p className="opacity-60 text-xs md:text-sm mb-3 md:mb-6 border-b border-secondary/30 pb-3 md:pb-6 font-medium">Shared room with another participant</p>
-                <ul className="space-y-1.5 md:space-y-3 opacity-80 text-[11px] md:text-sm font-medium leading-snug">
-                  <li>• 4 nights accommodation</li>
-                  <li>• All Ayurvedic meals</li>
-                  <li>• Daily yoga practice</li>
-                  <li>• 1-hr Ayurvedic massage</li>
-                  <li>• Sound Bath Journey</li>
-                  <li>• Family Constellation Workshop</li>
+                <h3 className="text-lg md:text-2xl font-serif mb-1 md:mb-4">Twin share</h3>
+                <div className="text-xl md:text-3xl mb-1 md:mb-2 font-bold text-primary">AUD 2,200 <span className="text-xs md:text-base font-normal opacity-60 text-neutral">/ person</span></div>
+                <p className="opacity-60 text-[10px] md:text-sm mb-3 md:mb-6 border-b border-secondary/30 pb-3 md:pb-6 font-medium leading-tight">Shared room with another participant</p>
+                <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-3 gap-y-1 md:space-y-3 opacity-80 text-[10px] md:text-sm font-medium leading-tight">
+                  <li>• 4 nights stay</li>
+                  <li>• All meals incl.</li>
+                  <li>• Daily yoga</li>
+                  <li>• 1-hr Massage</li>
+                  <li>• Sound Bath</li>
+                  <li>• Family Const.</li>
                 </ul>
               </div>
 
               {/* Single Room */}
               <div
-                className={`shrink-0 w-[85vw] md:w-auto snap-center border-2 rounded-2xl p-5 md:p-8 cursor-pointer transition-all ${roomType === "single" ? "border-primary bg-primary/5" : "border-secondary/30 hover:border-primary/50"}`}
+                className={`w-full md:w-auto border-2 rounded-2xl p-4 md:p-8 cursor-pointer transition-all ${roomType === "single" ? "border-primary bg-primary/5 shadow-md scale-[1.01]" : "border-secondary/30 hover:border-primary/50"}`}
                 onClick={() => setRoomType("single")}
               >
                 <div className="flex justify-between items-start mb-4 md:mb-6">
@@ -98,16 +95,16 @@ export default function BookingFlow() {
                     {roomType === "single" && <span className="text-xs">✓</span>}
                   </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-serif mb-2 md:mb-4">Single room</h3>
-                <div className="text-2xl md:text-3xl mb-1 md:mb-2 font-bold">AUD 2,350 <span className="text-sm md:text-base font-normal opacity-60">/ person</span></div>
-                <p className="opacity-60 text-xs md:text-sm mb-3 md:mb-6 border-b border-secondary/30 pb-3 md:pb-6 font-medium">Your own private sanctuary</p>
-                <ul className="space-y-1.5 md:space-y-3 opacity-80 text-[11px] md:text-sm font-medium leading-snug">
-                  <li>• 4 nights accommodation</li>
-                  <li>• All Ayurvedic meals</li>
-                  <li>• Daily yoga practice</li>
-                  <li>• 1-hr Ayurvedic massage</li>
-                  <li>• Sound Bath Journey</li>
-                  <li>• Family Constellation Workshop</li>
+                <h3 className="text-lg md:text-2xl font-serif mb-1 md:mb-4">Single room</h3>
+                <div className="text-xl md:text-3xl mb-1 md:mb-2 font-bold text-primary">AUD 2,350 <span className="text-xs md:text-base font-normal opacity-60 text-neutral">/ person</span></div>
+                <p className="opacity-60 text-[10px] md:text-sm mb-3 md:mb-6 border-b border-secondary/30 pb-3 md:pb-6 font-medium leading-tight">Your own private sanctuary</p>
+                <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-3 gap-y-1 md:space-y-3 opacity-80 text-[10px] md:text-sm font-medium leading-tight">
+                  <li>• 4 nights stay</li>
+                  <li>• All meals incl.</li>
+                  <li>• Daily yoga</li>
+                  <li>• 1-hr Massage</li>
+                  <li>• Sound Bath</li>
+                  <li>• Family Const.</li>
                 </ul>
               </div>
             </div>
